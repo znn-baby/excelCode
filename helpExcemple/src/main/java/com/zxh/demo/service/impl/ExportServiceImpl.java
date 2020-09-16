@@ -20,12 +20,25 @@ import java.io.IOException;
 @Service
 public class ExportServiceImpl implements ExportService {
     /**
-     * 导出一周的周报
+     * 复制excel中的第一个sheet 复制到当前excel中
+     */
+    @Override
+    public String copySheetInOneExcel(){
+        return "成功";
+    }
+
+
+    /**
+     * 从模版excel复制sheet到新excel中
      *
      * @return 执行结果
      */
     @Override
     public String exportOneWeek() {
+        // 1.查询数据库 循环内得到每个人的id 。。
+        // 2.通过日期工具类得到今年第一周第一天到现在这周的最后一天的日期
+        // 3. 根据 id 查出这个人的wss日志 3.
+
         String fromPath = "E:\\testExcel\\excelModel.xls";// excel模版
         File file = new File(fromPath);
         String toPath = "E:\\testExcel\\newExcel\\znn周报.xls";//新excel存放全路径

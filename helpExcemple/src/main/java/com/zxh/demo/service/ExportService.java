@@ -14,10 +14,14 @@ public interface ExportService {
      * @return 执行结果
      */
     String exportOneWeek();
-
     /**
      * 在excel表中新增一周的sheet
      * @return 新建一个excel
      */
     String newExcel();
+    /**
+     * 复制excel中的第一个sheet 复制到当前excel中
+     */
+    String copySheetInOneExcel();
+
 }
