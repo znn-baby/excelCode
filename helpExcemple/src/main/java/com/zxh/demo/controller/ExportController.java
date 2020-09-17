@@ -26,7 +26,7 @@ public class ExportController {
 
     @RequestMapping("exportOneWeek")
     public String exportOneWeek(Model model) {
-        String mess = exportServiceImpl.exportOneWeek();
+        String mess = exportServiceImpl.copySheetInOneExcel();
         model.addAttribute("mess", mess);
         return "layout/exportExcel";
     }
